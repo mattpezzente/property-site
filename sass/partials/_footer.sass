@@ -1,17 +1,14 @@
 #home, #contact
 	
 	footer
-		position: absolute
-		bottom: 0
-		background: rgba(0,0,0,0.5)
+		margin-top: -2.75rem
 
 footer
 	position: relative
 	display: flex
 	align-items: middle
 	padding: 0.5rem 0
-	height: 2rem
-	background: rgba(0,0,0,0.8)
+	background: $grey
 	width: 100%
 
 	h3
@@ -19,6 +16,9 @@ footer
 		padding-right: 0.5rem
 		display: inline
 		border-right: 2px solid $sand
+		line-height: 1.25
+		@include responsive(xs)
+			border: none
 		
 	a
 		font-size: $base-font-size - 0.125rem
@@ -28,16 +28,41 @@ footer
 .footer-connect
 	@extend %flex-box
 	align-items: center
-	max-height: 1.125rem
+	min-height: 1.125rem
+	@include responsive(xs)
+		margin: 1rem 0
+		justify-content: center
+		max-height: none
+
+.footer-copyright
+	@include responsive(md)
+		max-width: 28%
+		flex: 0 0 28%
+
+	h3 
+		border: none
+		@include responsive(xs)
+			font-size: $base-font-size - 0.25rem
 
 .footer-contact
 	justify-content: center
+	@include responsive(xs)
+	@include responsive(md)
+		max-width: 50%
+		flex: 0 0 50%
 
 	>*
-		margin: 0 0.5rem
+		margin: 0.25rem 0.5rem
 
 .footer-connect
 	justify-content: flex-end 
+	@include responsive(xs)
+		background: #111
+		padding: 2rem 0
+		justify-content: center
+	@include responsive(md)
+		max-width: 22%
+		flex: 0 0 22%
 
 	>*
 		margin-left: 0.5rem

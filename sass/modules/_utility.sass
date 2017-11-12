@@ -14,11 +14,17 @@
   @return $is-keyword or $is-angle
 
 @mixin responsive($size)
-  @if $size == tablet
-    @media (min-width: 625px) 
+  @if $size == xxs
+    @media (max-width: 500px) 
       @content
-  @else if $size == desktop
-    @media (min-width: 1000px) 
+  @else if $size == xs
+    @media (max-width: 768px) 
+      @content
+  @else if $size == sm
+    @media (max-width: 1200px) 
+      @content
+  @else if $size == md
+    @media (min-width: 1200px) 
       @content
 
 %center-object
