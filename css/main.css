@@ -35,7 +35,7 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-.properties-content, .properties-single, .properties-single .btn-link, .about, .about-footer .banner, .about-h1 {
+.properties-content, .properties-single, .properties-single .btn-link, .about, .about-h1, .about-footer .banner {
   margin-left: auto;
   margin-right: auto; }
 
@@ -110,8 +110,8 @@ html, body {
   margin: 0;
   padding: 0; }
 
-section .row {
-  padding: 1rem 15px; }
+.row {
+  margin-bottom: 1rem; }
 
 .banner {
   -webkit-box-pack: center;
@@ -163,7 +163,7 @@ section .row {
   font-weight: 500;
   font-size: 0.875rem; }
 
-#home .main-nav {
+#home .main-nav, #about .main-nav {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
   background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, transparent 100%);
   -webkit-box-shadow: none;
@@ -171,20 +171,45 @@ section .row {
 
 .main-nav {
   position: relative;
-  padding: 1rem 0;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0.5rem;
   width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 153, 251, 0.7)), to(rgba(38, 153, 251, 0.7))), url("../img/pezzente-properties-beach-front-chairs-old-saybrook-connecticut.jpg") no-repeat center/cover;
   background: linear-gradient(rgba(38, 153, 251, 0.7) 0%, rgba(38, 153, 251, 0.7) 100%), url("../img/pezzente-properties-beach-front-chairs-old-saybrook-connecticut.jpg") no-repeat center/cover;
   -webkit-box-shadow: 1px 1px 10px #000;
           box-shadow: 1px 1px 10px #000; }
 
-.nav-links {
-  text-align: right; }
-  .nav-links li {
-    display: inline-block;
-    margin: 0.5rem 1rem; }
-  .nav-links li:last-child {
-    margin-right: 0; }
+.navbar-nav {
+  margin-left: auto; }
+
+.navbar-brand {
+  max-width: 80%; }
+  @media (max-width: 1200px) {
+    .navbar-brand {
+      max-width: 70%; } }
+  @media (max-width: 768px) {
+    .navbar-brand {
+      max-width: 60%; } }
+
+.navbar-light .navbar-nav .nav-link {
+  margin: 0.5rem 0.5rem;
+  color: #EEEEEE;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 3px #464646; }
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: #EEEEEE;
+    opacity: 0.5; }
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: #EEEEEE;
+  opacity: 0.5; }
+
+.navbar-light .navbar-toggler {
+  background: #EEEEEE;
+  cursor: pointer; }
+  @media (max-width: 500px) {
+    .navbar-light .navbar-toggler {
+      padding: 0.0125rem 0.25rem; } }
 
 #home-splash {
   background: url("../img/pezzente-properties-beach-front-chairs-old-saybrook-connecticut.jpg") no-repeat center/cover;
@@ -271,38 +296,10 @@ section .row {
     -webkit-box-shadow: 1px 1px 6px #000;
             box-shadow: 1px 1px 6px #000; }
 
-.about-footer {
-  width: 100%;
-  padding: 2rem 0;
-  background: url("../img/b1.jpg") no-repeat center/cover; }
-  .about-footer .banner {
-    max-width: 70rem; }
-  .about-footer img {
-    border: 4px solid #F7D897;
-    -webkit-box-shadow: 1px 1px 6px #000;
-            box-shadow: 1px 1px 6px #000; }
-  .about-footer p {
-    color: #EEEEEE;
-    font-size: 1.25rem; }
-
-.img-portrait {
-  height: calc(100% - 1.5rem);
-  border: 4px solid #F7D897;
-  -webkit-box-shadow: 1px 1px 6px #000;
-          box-shadow: 1px 1px 6px #000;
-  overflow: hidden;
-  text-align: center; }
-  .img-portrait img {
-    margin-left: -25%;
-    max-width: 200%;
-    height: 100%;
-    border: none;
-    -webkit-box-shadow: none;
-            box-shadow: none; }
-
 .about-h1 {
   position: relative;
   margin-top: -2rem;
+  margin-bottom: 1rem;
   max-width: 15rem;
   display: block;
   background: #97292F;
@@ -315,17 +312,46 @@ section .row {
   text-transform: uppercase;
   font-size: 2rem;
   -webkit-transition: 0.2s;
-  transition: 0.2s;
-  z-index: 999; }
+  transition: 0.2s; }
+  @media (max-width: 1200px) {
+    .about-h1 {
+      font-size: 1.5rem; } }
+
+.img-tall {
+  display: block;
+  margin: 0 auto; }
+
+.about-footer {
+  width: 100%;
+  padding: 2rem 2rem;
+  background: url("../img/b1.jpg") no-repeat center/cover; }
+  @media (max-width: 500px) {
+    .about-footer {
+      padding: 1rem 0; } }
+  .about-footer .banner {
+    max-width: 70rem; }
+    @media (max-width: 500px) {
+      .about-footer .banner {
+        padding: 0 0.5rem; } }
+    .about-footer .banner img {
+      margin-bottom: 1rem; }
+  .about-footer img {
+    border: 4px solid #F7D897;
+    -webkit-box-shadow: 1px 1px 6px #000;
+            box-shadow: 1px 1px 6px #000; }
+  .about-footer p {
+    color: #EEEEEE;
+    font-size: 1.25rem; }
 
 #about-splash {
   background: url("../img/pezzente-properties-beach-front-chairs-old-saybrook-connecticut.jpg") no-repeat center/cover;
-  width: 100%;
-  height: 100%; }
+  padding-bottom: 1rem;
+  width: 100%; }
   #about-splash .contact-form {
     display: block;
     background: #97292F;
     border: 5px solid #EEEEEE;
+    margin-bottom: 2rem;
     padding: 2rem;
     -webkit-box-shadow: 1px 1px 6px #000;
             box-shadow: 1px 1px 6px #000; }
@@ -336,7 +362,7 @@ section .row {
     text-align: center;
     font-size: 2rem; }
 
-#home footer, #contact footer {
+#home footer {
   margin-top: -2.75rem; }
 
 footer {
@@ -350,6 +376,8 @@ footer {
   padding: 0.5rem 0;
   background: #464646;
   width: 100%; }
+  footer .row {
+    margin-bottom: 0; }
   footer h3 {
     color: #F7D897;
     padding-right: 0.5rem;

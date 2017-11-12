@@ -7,42 +7,11 @@
 		border: 4px solid $sand
 		box-shadow: 1px 1px 6px $shadow
 
-.about-footer
-	width: 100%
-	padding: 2rem 0
-	background: url('../img/b1.jpg') no-repeat center/cover
-
-	.banner
-		@extend %center-object
-		max-width: 70rem
-
-	img
-		border: 4px solid $sand
-		box-shadow: 1px 1px 6px $shadow
-
-	p
-		color: $white
-		font-size: $base-font-size + 0.25rem
-
-
-.img-portrait
-	height: calc(100% - 1.5rem)
-	border: 4px solid $sand
-	box-shadow: 1px 1px 6px $shadow
-	overflow: hidden
-	text-align: center
-
-	img	
-		margin-left: -25%
-		max-width: 200%
-		height: 100%
-		border: none
-		box-shadow: none
-
 .about-h1
 	@extend %center-object
 	position: relative
 	margin-top: -2rem
+	margin-bottom: 1rem
 	max-width: 15rem
 	display: block
 	background: $red
@@ -54,4 +23,34 @@
 	text-transform: uppercase
 	font-size: $base-font-size + 1
 	transition: 0.2s
-	z-index: 999
+	@include responsive(sm)
+		font-size: $base-font-size + 0.5
+
+
+.img-tall
+	display: block
+	margin: 0 auto
+
+.about-footer
+	width: 100%
+	padding: 2rem 2rem
+	background: url('../img/b1.jpg') no-repeat center/cover
+	@include responsive(xxs)
+		padding: 1rem 0
+
+	.banner
+		@extend %center-object
+		max-width: 70rem
+		@include responsive(xxs)
+			padding: 0 0.5rem
+
+		img
+			margin-bottom: 1rem
+
+	img
+		border: 4px solid $sand
+		box-shadow: 1px 1px 6px $shadow
+
+	p
+		color: $white
+		font-size: $base-font-size + 0.25rem
