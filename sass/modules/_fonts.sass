@@ -1,15 +1,41 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat')
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i')
 
-h1, h2, h3, h4, p, a, li, input, label, legend
+h1, h2, h3, h4, p, a, li, input, label, legend, button, textarea
 	font-family: 'Montserrat', sans-serif
 
+h1
+	font-size: $base-font-size + 1
+
+h2
+	font-weight: bold
+
 h3
-	color: $sand
+	color: $grey
+	font-weight: 500
+
+label
+	font-size: $base-font-size + 0.25rem
+	color: $white
+	margin: 0.5rem 0
+	text-shadow: 1px 1px 1px $shadow
+
+input
+	color: $blue
+
+p
+	word-spacing: 2px
+	line-height: 1.5
+	margin: 1.25rem 0
 
 a
 	color: $white
 	font-size: $base-font-size + 0.5rem
 	text-shadow: 1px 1px 3px $grey
+
+a:hover
+	color: $white
+	opacity: 0.8
+	text-decoration: none
 
 .sand-highlight
 	color: $sand

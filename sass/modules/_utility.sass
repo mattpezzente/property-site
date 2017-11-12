@@ -30,3 +30,11 @@
 	justify-content: space-between
 	flex-direction: row
 	flex-wrap: wrap
+
+.a-flex
+  @extend %flex-box
+  justify-content: center
+  align-items: center
+
+  >*
+    margin-right: 0.25rem

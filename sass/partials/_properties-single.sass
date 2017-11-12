@@ -1,0 +1,44 @@
+.properties-single
+	@extend %center-object
+	max-width: 60rem
+
+	.row
+		padding: 1rem 0
+
+	img
+		margin-bottom: 1rem
+		border: 2px solid $white
+		box-shadow: 1px 1px 4px $shadow
+		max-width: 100%
+
+	.img-selector-container
+		@extend %flex-box
+		justify-content: center
+		margin: 1rem 0
+
+	.img-selector
+		background: transparent
+		border-radius: 1rem
+		border: 3px solid $blue
+		margin: 0 0.5rem
+		height: 1rem
+		width: 1rem
+		cursor: pointer
+
+		&:hover
+			background: $blue
+
+	.img-selector-selected
+		background: $blue
+	
+	h3
+		text-align: center
+
+	h2
+		text-align: center
+		font-size: $base-font-size + 0.75rem
+
+	.btn-link
+		@extend %center-object
+
+		

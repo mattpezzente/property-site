@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -35,11 +35,11 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-.properties-content {
+.properties-content, .properties-single, .properties-single .btn-link, .about, .about-footer .banner, .about-h1 {
   margin-left: auto;
   margin-right: auto; }
 
-.home-banner, .footer-copyright,
+.a-flex, .banner, .properties-single .img-selector-container, .footer-copyright,
 .footer-contact,
 .footer-connect {
   display: -webkit-box;
@@ -55,16 +55,52 @@ table {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
-h1, h2, h3, h4, p, a, li, input, label, legend {
+.a-flex {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .a-flex > * {
+    margin-right: 0.25rem; }
+
+h1, h2, h3, h4, p, a, li, input, label, legend, button, textarea {
   font-family: 'Montserrat', sans-serif; }
 
+h1 {
+  font-size: 2rem; }
+
+h2 {
+  font-weight: bold; }
+
 h3 {
-  color: #F7D897; }
+  color: #464646;
+  font-weight: 500; }
+
+label {
+  font-size: 1.25rem;
+  color: #EEEEEE;
+  margin: 0.5rem 0;
+  text-shadow: 1px 1px 1px #000; }
+
+input {
+  color: #2699FB; }
+
+p {
+  word-spacing: 2px;
+  line-height: 1.5;
+  margin: 1.25rem 0; }
 
 a {
   color: #EEEEEE;
   font-size: 1.5rem;
   text-shadow: 1px 1px 3px #464646; }
+
+a:hover {
+  color: #EEEEEE;
+  opacity: 0.8;
+  text-decoration: none; }
 
 .sand-highlight {
   color: #F7D897; }
@@ -74,8 +110,28 @@ html, body {
   margin: 0;
   padding: 0; }
 
+section .row {
+  padding: 1rem 15px; }
+
+.banner {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  border: 0.5rem solid #eee;
+  background: #9F383B;
+  text-align: center; }
+  .banner .banner-seperator {
+    background: #eee;
+    margin: 0.5rem 0;
+    width: 60%;
+    height: 0.15rem; }
+
 #content {
   padding-bottom: 5rem; }
+
+.dark-highlight {
+  font-weight: bold; }
 
 .btn-link {
   display: inline-block;
@@ -87,12 +143,23 @@ html, body {
   -webkit-box-shadow: 1px 1px 4px #000;
           box-shadow: 1px 1px 4px #000;
   color: #EEEEEE;
-  font-size: 1rem; }
+  font-size: 1rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s; }
+  .btn-link:hover {
+    color: #EEEEEE;
+    text-decoration: none;
+    background: #2699FB;
+    border: 2px solid #EEEEEE; }
 
 .btn-action {
   background: #97292F; }
+  .btn-action:hover {
+    background: #97292F;
+    border: 2px solid #EEEEEE; }
 
 .disclaimer {
+  font-weight: 500;
   font-size: 0.875rem; }
 
 #home .main-nav {
@@ -122,27 +189,15 @@ html, body {
   background: url("../img/pezzente-properties-beach-front-chairs-old-saybrook-connecticut.jpg") no-repeat center/cover;
   width: 100%;
   height: 100%; }
-
-.home-banner {
-  position: absolute;
-  right: 1rem;
-  bottom: 3rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 1rem;
-  border: 0.5rem solid #eee;
-  background: #9F383B;
-  width: 25rem;
-  text-align: center; }
-  .home-banner .home-banner-seperator {
-    background: #eee;
-    margin: 0.5rem 0;
-    width: 60%;
-    height: 0.15rem; }
-  .home-banner h2 {
+  #home-splash .banner {
+    position: absolute;
+    right: 1rem;
+    bottom: 3rem;
+    width: 25rem; }
+  #home-splash h2 {
     color: #eee;
     font-size: 2.5rem;
+    font-weight: 400;
     font-style: italic;
     text-transform: uppercase;
     line-height: 1.5; }
@@ -150,8 +205,6 @@ html, body {
 .properties-content {
   margin-top: 1rem;
   max-width: 60rem; }
-  .properties-content .row {
-    padding: 1rem 0; }
   .properties-content img {
     border: 2px solid #EEEEEE;
     -webkit-box-shadow: 1px 1px 4px #000;
@@ -163,8 +216,119 @@ html, body {
     line-height: 1.5;
     margin: 1.25rem 0; }
 
-footer {
+.properties-single {
+  max-width: 60rem; }
+  .properties-single .row {
+    padding: 1rem 0; }
+  .properties-single img {
+    margin-bottom: 1rem;
+    border: 2px solid #EEEEEE;
+    -webkit-box-shadow: 1px 1px 4px #000;
+            box-shadow: 1px 1px 4px #000;
+    max-width: 100%; }
+  .properties-single .img-selector-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 1rem 0; }
+  .properties-single .img-selector {
+    background: transparent;
+    border-radius: 1rem;
+    border: 3px solid #2699FB;
+    margin: 0 0.5rem;
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer; }
+    .properties-single .img-selector:hover {
+      background: #2699FB; }
+  .properties-single .img-selector-selected {
+    background: #2699FB; }
+  .properties-single h3 {
+    text-align: center; }
+  .properties-single h2 {
+    text-align: center;
+    font-size: 1.75rem; }
+
+.about {
+  max-width: 70rem;
+  margin-bottom: 1rem; }
+  .about img {
+    border: 4px solid #F7D897;
+    -webkit-box-shadow: 1px 1px 6px #000;
+            box-shadow: 1px 1px 6px #000; }
+
+.about-footer {
+  width: 100%;
+  padding: 2rem 0;
+  background: url("../img/b1.jpg") no-repeat center/cover; }
+  .about-footer .banner {
+    max-width: 70rem; }
+  .about-footer img {
+    border: 4px solid #F7D897;
+    -webkit-box-shadow: 1px 1px 6px #000;
+            box-shadow: 1px 1px 6px #000; }
+  .about-footer p {
+    color: #EEEEEE;
+    font-size: 1.25rem; }
+
+.img-portrait {
+  height: calc(100% - 1.5rem);
+  border: 4px solid #F7D897;
+  -webkit-box-shadow: 1px 1px 6px #000;
+          box-shadow: 1px 1px 6px #000;
+  overflow: hidden;
+  text-align: center; }
+  .img-portrait img {
+    margin-left: -25%;
+    max-width: 200%;
+    height: 100%;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+
+.about-h1 {
+  position: relative;
+  margin-top: -2rem;
+  max-width: 15rem;
+  display: block;
+  background: #97292F;
+  padding: 0.625rem 1.5rem;
+  border: 2px solid #EEEEEE;
+  -webkit-box-shadow: 1px 1px 4px #000;
+          box-shadow: 1px 1px 4px #000;
+  color: #EEEEEE;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  z-index: 999; }
+
+#about-splash {
+  background: url("../img/pezzente-properties-beach-front-chairs-old-saybrook-connecticut.jpg") no-repeat center/cover;
+  width: 100%;
+  height: 100%; }
+  #about-splash .contact-form {
+    display: block;
+    background: #97292F;
+    border: 5px solid #EEEEEE;
+    padding: 2rem;
+    -webkit-box-shadow: 1px 1px 6px #000;
+            box-shadow: 1px 1px 6px #000; }
+  #about-splash h2 {
+    color: #EEEEEE;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px #000;
+    text-align: center;
+    font-size: 2rem; }
+
+#home footer, #contact footer {
   position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); }
+
+footer {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,10 +337,10 @@ footer {
           align-items: middle;
   padding: 0.5rem 0;
   height: 2rem;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   width: 100%; }
   footer h3 {
+    color: #F7D897;
     padding-right: 0.5rem;
     display: inline;
     border-right: 2px solid #F7D897; }

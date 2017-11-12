@@ -3,8 +3,30 @@ html, body
 	margin: 0
 	padding: 0
 
+section
+	
+	.row
+			padding: 1rem 15px
+
+.banner
+	@extend %flex-box
+	justify-content: center
+	padding: 1rem
+	border: 0.5rem solid #eee
+	background: #9F383B
+	text-align: center
+
+	.banner-seperator
+		background: #eee
+		margin: 0.5rem 0
+		width: 60%
+		height: 0.15rem
+
 #content
 	padding-bottom: 5rem
+
+.dark-highlight
+	font-weight: bold
 
 .btn-link
 	display: inline-block
@@ -16,9 +38,21 @@ html, body
 	box-shadow: 1px 1px 4px $shadow
 	color: $white
 	font-size: $base-font-size
+	transition: 0.2s
+
+	&:hover
+		color: $white
+		text-decoration: none
+		background: $blue
+		border: 2px solid $white
 
 .btn-action
 	background: $red
 
+	&:hover
+		background: $red
+		border: 2px solid $white
+
 .disclaimer
+	font-weight: 500
 	font-size: $base-font-size - 0.125rem
