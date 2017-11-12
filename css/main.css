@@ -35,6 +35,10 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+.properties-content {
+  margin-left: auto;
+  margin-right: auto; }
+
 .home-banner, .footer-copyright,
 .footer-contact,
 .footer-connect {
@@ -73,16 +77,38 @@ html, body {
 #content {
   padding-bottom: 5rem; }
 
-#header .main-nav {
+.btn-link {
+  display: inline-block;
+  background: #2699FB;
+  margin-right: 1rem;
+  padding: 0.625rem 1.5rem;
+  border-radius: 2px;
+  border: 2px solid #EEEEEE;
+  -webkit-box-shadow: 1px 1px 4px #000;
+          box-shadow: 1px 1px 4px #000;
+  color: #EEEEEE;
+  font-size: 1rem; }
+
+.btn-action {
+  background: #97292F; }
+
+.disclaimer {
+  font-size: 0.875rem; }
+
+#home .main-nav {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
-  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, transparent 100%); }
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+  -webkit-box-shadow: none;
+          box-shadow: none; }
 
 .main-nav {
   position: relative;
   padding: 1rem 0;
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
-  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, transparent 100%); }
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 153, 251, 0.7)), to(rgba(38, 153, 251, 0.7))), url("../img/pezzente-properties-beach-front-chairs-old-saybrook-connecticut.jpg") no-repeat center/cover;
+  background: linear-gradient(rgba(38, 153, 251, 0.7) 0%, rgba(38, 153, 251, 0.7) 100%), url("../img/pezzente-properties-beach-front-chairs-old-saybrook-connecticut.jpg") no-repeat center/cover;
+  -webkit-box-shadow: 1px 1px 10px #000;
+          box-shadow: 1px 1px 10px #000; }
 
 .nav-links {
   text-align: right; }
@@ -120,6 +146,22 @@ html, body {
     font-style: italic;
     text-transform: uppercase;
     line-height: 1.5; }
+
+.properties-content {
+  margin-top: 1rem;
+  max-width: 60rem; }
+  .properties-content .row {
+    padding: 1rem 0; }
+  .properties-content img {
+    border: 2px solid #EEEEEE;
+    -webkit-box-shadow: 1px 1px 4px #000;
+            box-shadow: 1px 1px 4px #000;
+    max-width: 100%; }
+  .properties-content h2 {
+    font-size: 1.75rem; }
+  .properties-content p {
+    line-height: 1.5;
+    margin: 1.25rem 0; }
 
 footer {
   position: absolute;
