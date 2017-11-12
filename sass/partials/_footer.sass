@@ -1,0 +1,45 @@
+footer
+	position: absolute
+	display: flex
+	align-items: middle
+	padding: 0.5rem 0
+	height: 2rem
+	bottom: 0
+	background: rgba(0,0,0,0.5)
+	width: 100%
+
+	h3
+		padding-right: 0.5rem
+		display: inline
+		border-right: 2px solid $sand
+		
+	a
+		font-size: $base-font-size - 0.125rem
+
+.footer-copyright,
+.footer-contact,
+.footer-connect
+	@extend %flex-box
+	align-items: center
+	max-height: 1.125rem
+
+.footer-contact
+	justify-content: center
+
+	>*
+		margin: 0 0.5rem
+
+.footer-connect
+	justify-content: flex-end 
+
+	>*
+		margin-left: 0.5rem
+
+		
+
+.flipkey
+	max-width: 5rem
+
+.facebook, 
+.instagram
+	fill: #eee

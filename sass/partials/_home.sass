@@ -1,4 +1,30 @@
-#home
+#home-splash
 	background: url('../img/pezzente-properties-beach-front-chairs-old-saybrook-connecticut.jpg') no-repeat center/cover
 	width: 100%
-	height: 50rem
+	height: 100%
+
+.home-banner
+	@extend %flex-box
+	position: absolute
+	right: 1rem
+	bottom: 3rem
+	justify-content: center
+	padding: 1rem
+	border: 0.5rem solid #eee
+	background: #9F383B
+	width: 25rem
+	text-align: center
+
+	.home-banner-seperator
+		background: #eee
+		margin: 0.5rem 0
+		width: 60%
+		height: 0.15rem
+
+	h2
+		color: #eee
+		font-size: $base-font-size + 1.5rem
+		font-style: italic
+		text-transform: uppercase
+		line-height: 1.5
+

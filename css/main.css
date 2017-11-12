@@ -35,26 +35,137 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+.home-banner, .footer-copyright,
+.footer-contact,
+.footer-connect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
 h1, h2, h3, h4, p, a, li, input, label, legend {
   font-family: 'Montserrat', sans-serif; }
+
+h3 {
+  color: #F7D897; }
 
 a {
   color: #EEEEEE;
   font-size: 1.5rem;
   text-shadow: 1px 1px 3px #464646; }
 
+.sand-highlight {
+  color: #F7D897; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+#content {
+  padding-bottom: 5rem; }
+
+#header .main-nav {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, transparent 100%); }
+
 .main-nav {
-  position: absolute;
-  padding: 1rem;
-  width: 100%; }
+  position: relative;
+  padding: 1rem 0;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, transparent 100%); }
 
 .nav-links {
   text-align: right; }
   .nav-links li {
     display: inline-block;
-    margin: 1rem; }
+    margin: 0.5rem 1rem; }
+  .nav-links li:last-child {
+    margin-right: 0; }
 
-#home {
+#home-splash {
   background: url("../img/pezzente-properties-beach-front-chairs-old-saybrook-connecticut.jpg") no-repeat center/cover;
   width: 100%;
-  height: 50rem; }
+  height: 100%; }
+
+.home-banner {
+  position: absolute;
+  right: 1rem;
+  bottom: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  border: 0.5rem solid #eee;
+  background: #9F383B;
+  width: 25rem;
+  text-align: center; }
+  .home-banner .home-banner-seperator {
+    background: #eee;
+    margin: 0.5rem 0;
+    width: 60%;
+    height: 0.15rem; }
+  .home-banner h2 {
+    color: #eee;
+    font-size: 2.5rem;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 1.5; }
+
+footer {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: middle;
+      -ms-flex-align: middle;
+          align-items: middle;
+  padding: 0.5rem 0;
+  height: 2rem;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%; }
+  footer h3 {
+    padding-right: 0.5rem;
+    display: inline;
+    border-right: 2px solid #F7D897; }
+  footer a {
+    font-size: 0.875rem; }
+
+.footer-copyright,
+.footer-contact,
+.footer-connect {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 1.125rem; }
+
+.footer-contact {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .footer-contact > * {
+    margin: 0 0.5rem; }
+
+.footer-connect {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  .footer-connect > * {
+    margin-left: 0.5rem; }
+
+.flipkey {
+  max-width: 5rem; }
+
+.facebook,
+.instagram {
+  fill: #eee; }
