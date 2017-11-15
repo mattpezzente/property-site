@@ -1,4 +1,4 @@
-#home, #about
+#home, #contact
 	
 	.main-nav
 		background: linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%)
@@ -7,7 +7,7 @@
 .main-nav
 	position: relative
 	margin-bottom: 2rem
-	padding: 0.5rem 0.5rem
+	padding: 5px 15px
 	width: 100%
 	background: linear-gradient(rgba(38, 153, 251, 0.7) 0%, rgba(38, 153, 251, 0.7) 100%), url('../img/pezzente-properties-beach-front-chairs-old-saybrook-connecticut.jpg') no-repeat center/cover
 	box-shadow: 1px 1px 10px #000
@@ -23,10 +23,11 @@
 		max-width: 60%
 
 .navbar-light .navbar-nav .nav-link 
-	margin: 0.5rem 0.5rem
 	color: $white
 	font-size: $base-font-size + 0.5rem
 	text-shadow: 1px 1px 3px $grey
+	@include responsive(sm)
+		font-size: $base-font-size + 0.25rem
 
 	&:hover
 		color: $white

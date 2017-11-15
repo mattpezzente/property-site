@@ -1,0 +1,22 @@
+.about-footer
+	width: 100%
+	padding: 2rem 2rem
+	background: url('../img/b1.jpg') no-repeat center/cover
+	@include responsive(xxs)
+		padding: 1rem 0
+
+
+	.banner
+		@extend %center-object
+		max-width: 70rem
+		@include responsive(xxs)
+			padding: 1rem 0.5rem
+
+		img
+			margin-bottom: 1rem
+			border: 4px solid $white
+			box-shadow: 1px 1px 4px $shadow
+
+	p
+		color: $white
+		font-size: $base-font-size + 0.25rem

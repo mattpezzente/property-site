@@ -35,11 +35,11 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-.properties-content, .properties-single, .properties-single .btn-link, .about, .about-h1, .about-footer .banner {
+.content, .content-wide, .single-prop .btn-link, .about-footer .banner {
   margin-left: auto;
   margin-right: auto; }
 
-.a-flex, .banner, .properties-single .img-selector-container, .footer-copyright,
+.a-flex, .banner, .gallery .img-selector-container, .footer-copyright,
 .footer-contact,
 .footer-connect {
   display: -webkit-box;
@@ -163,7 +163,7 @@ html, body {
   font-weight: 500;
   font-size: 0.875rem; }
 
-#home .main-nav, #about .main-nav {
+#home .main-nav, #contact .main-nav {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
   background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, transparent 100%);
   -webkit-box-shadow: none;
@@ -172,7 +172,7 @@ html, body {
 .main-nav {
   position: relative;
   margin-bottom: 2rem;
-  padding: 0.5rem 0.5rem;
+  padding: 5px 15px;
   width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 153, 251, 0.7)), to(rgba(38, 153, 251, 0.7))), url("../img/pezzente-properties-beach-front-chairs-old-saybrook-connecticut.jpg") no-repeat center/cover;
   background: linear-gradient(rgba(38, 153, 251, 0.7) 0%, rgba(38, 153, 251, 0.7) 100%), url("../img/pezzente-properties-beach-front-chairs-old-saybrook-connecticut.jpg") no-repeat center/cover;
@@ -192,10 +192,12 @@ html, body {
       max-width: 60%; } }
 
 .navbar-light .navbar-nav .nav-link {
-  margin: 0.5rem 0.5rem;
   color: #EEEEEE;
   font-size: 1.5rem;
   text-shadow: 1px 1px 3px #464646; }
+  @media (max-width: 1200px) {
+    .navbar-light .navbar-nav .nav-link {
+      font-size: 1.25rem; } }
   .navbar-light .navbar-nav .nav-link:hover {
     color: #EEEEEE;
     opacity: 0.5; }
@@ -210,6 +212,104 @@ html, body {
   @media (max-width: 500px) {
     .navbar-light .navbar-toggler {
       padding: 0.0125rem 0.25rem; } }
+
+.content-heading {
+  text-align: center;
+  margin-bottom: 2.5rem; }
+  .content-heading img {
+    border: 4px solid #F7D897;
+    -webkit-box-shadow: 1px 1px 6px #000;
+            box-shadow: 1px 1px 6px #000;
+    max-height: 30rem; }
+  .content-heading h1 {
+    display: inline;
+    position: relative;
+    background: #97292F;
+    top: -1.25rem;
+    margin-bottom: 1rem;
+    padding: 0.625rem 3rem;
+    border: 2px solid #EEEEEE;
+    -webkit-box-shadow: 1px 1px 4px #000;
+            box-shadow: 1px 1px 4px #000;
+    color: #EEEEEE;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+    @media (max-width: 1200px) {
+      .content-heading h1 {
+        font-size: 1.5rem; } }
+
+.content, .content-wide {
+  margin-top: 1rem;
+  max-width: 60rem; }
+  .content img, .content-wide img {
+    margin-bottom: 1rem;
+    border: 4px solid #EEEEEE;
+    -webkit-box-shadow: 1px 1px 4px #000;
+            box-shadow: 1px 1px 4px #000;
+    max-width: 100%; }
+  .content h2, .content-wide h2 {
+    font-size: 1.75rem; }
+  .content p, .content-wide p {
+    line-height: 1.5;
+    margin: 1.25rem 0; }
+
+.content-wide {
+  max-width: 70rem; }
+
+.gallery .gallery-img {
+  display: none;
+  margin-bottom: 1rem;
+  border: 2px solid #EEEEEE;
+  -webkit-box-shadow: 1px 1px 4px #000;
+          box-shadow: 1px 1px 4px #000;
+  max-width: 100%; }
+  .gallery .gallery-img img {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: none; }
+
+.gallery .img-visible {
+  display: block; }
+
+.gallery .img-selector-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem; }
+
+.gallery h3 {
+  text-align: center;
+  padding-bottom: 0.5rem; }
+
+.gallery .img-selector {
+  background: transparent;
+  border-radius: 1rem;
+  border: 3px solid #2699FB;
+  margin: 0 0.5rem;
+  height: 1rem;
+  width: 1rem;
+  cursor: pointer; }
+  .gallery .img-selector:hover {
+    background: #2699FB; }
+
+.gallery .img-selector-selected {
+  background: #2699FB; }
+
+.single-prop h2 {
+  text-align: center;
+  font-size: 1.75rem; }
+
+.single-prop .btn-link {
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem; }
+  @media (max-width: 768px) {
+    .single-prop .btn-link {
+      font-size: 1rem; } }
 
 #home-splash {
   background: url("../img/pezzente-properties-beach-front-chairs-old-saybrook-connecticut.jpg") no-repeat center/cover;
@@ -240,87 +340,6 @@ html, body {
       #home-splash h2 {
         font-size: 1rem; } }
 
-.properties-content {
-  margin-top: 1rem;
-  max-width: 60rem; }
-  .properties-content img {
-    margin-bottom: 1rem;
-    border: 2px solid #EEEEEE;
-    -webkit-box-shadow: 1px 1px 4px #000;
-            box-shadow: 1px 1px 4px #000;
-    max-width: 100%; }
-  .properties-content h2 {
-    font-size: 1.75rem; }
-  .properties-content p {
-    line-height: 1.5;
-    margin: 1.25rem 0; }
-
-.properties-single {
-  max-width: 60rem; }
-  .properties-single .row {
-    padding: 1rem 0; }
-  .properties-single img {
-    margin-bottom: 1rem;
-    border: 2px solid #EEEEEE;
-    -webkit-box-shadow: 1px 1px 4px #000;
-            box-shadow: 1px 1px 4px #000;
-    max-width: 100%; }
-  .properties-single .img-selector-container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 1rem 0; }
-  .properties-single .img-selector {
-    background: transparent;
-    border-radius: 1rem;
-    border: 3px solid #2699FB;
-    margin: 0 0.5rem;
-    height: 1rem;
-    width: 1rem;
-    cursor: pointer; }
-    .properties-single .img-selector:hover {
-      background: #2699FB; }
-  .properties-single .img-selector-selected {
-    background: #2699FB; }
-  .properties-single h3 {
-    text-align: center; }
-  .properties-single h2 {
-    text-align: center;
-    font-size: 1.75rem; }
-
-.about {
-  max-width: 70rem;
-  margin-bottom: 1rem; }
-  .about img {
-    border: 4px solid #F7D897;
-    -webkit-box-shadow: 1px 1px 6px #000;
-            box-shadow: 1px 1px 6px #000; }
-
-.about-h1 {
-  position: relative;
-  margin-top: -2rem;
-  margin-bottom: 1rem;
-  max-width: 15rem;
-  display: block;
-  background: #97292F;
-  padding: 0.625rem 1.5rem;
-  border: 2px solid #EEEEEE;
-  -webkit-box-shadow: 1px 1px 4px #000;
-          box-shadow: 1px 1px 4px #000;
-  color: #EEEEEE;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 2rem;
-  -webkit-transition: 0.2s;
-  transition: 0.2s; }
-  @media (max-width: 1200px) {
-    .about-h1 {
-      font-size: 1.5rem; } }
-
-.img-tall {
-  display: block;
-  margin: 0 auto; }
-
 .about-footer {
   width: 100%;
   padding: 2rem 2rem;
@@ -332,22 +351,21 @@ html, body {
     max-width: 70rem; }
     @media (max-width: 500px) {
       .about-footer .banner {
-        padding: 0 0.5rem; } }
+        padding: 1rem 0.5rem; } }
     .about-footer .banner img {
-      margin-bottom: 1rem; }
-  .about-footer img {
-    border: 4px solid #F7D897;
-    -webkit-box-shadow: 1px 1px 6px #000;
-            box-shadow: 1px 1px 6px #000; }
+      margin-bottom: 1rem;
+      border: 4px solid #EEEEEE;
+      -webkit-box-shadow: 1px 1px 4px #000;
+              box-shadow: 1px 1px 4px #000; }
   .about-footer p {
     color: #EEEEEE;
     font-size: 1.25rem; }
 
-#about-splash {
+#contact-splash {
   background: url("../img/pezzente-properties-beach-front-chairs-old-saybrook-connecticut.jpg") no-repeat center/cover;
-  padding-bottom: 1rem;
-  width: 100%; }
-  #about-splash .contact-form {
+  width: 100%;
+  height: 100%; }
+  #contact-splash .contact-form {
     display: block;
     background: #97292F;
     border: 5px solid #EEEEEE;
@@ -355,14 +373,14 @@ html, body {
     padding: 2rem;
     -webkit-box-shadow: 1px 1px 6px #000;
             box-shadow: 1px 1px 6px #000; }
-  #about-splash h2 {
+  #contact-splash h2 {
     color: #EEEEEE;
     font-weight: 400;
     text-shadow: 1px 1px 2px #000;
     text-align: center;
     font-size: 2rem; }
 
-#home footer {
+#home footer, #contact footer {
   margin-top: -2.75rem; }
 
 footer {

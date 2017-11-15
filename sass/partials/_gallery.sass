@@ -1,20 +1,28 @@
-.properties-single
-	@extend %center-object
-	max-width: 60rem
+.gallery 
 
-	.row
-		padding: 1rem 0
-
-	img
+	.gallery-img
+		display: none
 		margin-bottom: 1rem
 		border: 2px solid $white
 		box-shadow: 1px 1px 4px $shadow
 		max-width: 100%
 
+		img
+			box-shadow: none
+			border: none
+
+	.img-visible
+		display: block
+
 	.img-selector-container
 		@extend %flex-box
 		justify-content: center
-		margin: 1rem 0
+		margin-top: 1rem
+		margin-bottom: 2rem
+
+	h3
+		text-align: center
+		padding-bottom: 0.5rem
 
 	.img-selector
 		background: transparent
@@ -30,15 +38,3 @@
 
 	.img-selector-selected
 		background: $blue
-	
-	h3
-		text-align: center
-
-	h2
-		text-align: center
-		font-size: $base-font-size + 0.75rem
-
-	.btn-link
-		@extend %center-object
-
-		
